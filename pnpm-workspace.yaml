@@ -1,0 +1,7 @@
+packages:
+  - 'server'
+  - 'client'
+  # Add more workspace folders here as needed, e.g.:
+  # - 'packages/*'
+  # - 'tooling/*'
+  # Note: requirements/ and specs/ are intentionally NOT workspaces.

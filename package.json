@@ -1,0 +1,21 @@
+{
+  "name": "monorepo-sdd-tdd-boilerplate",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter ./server dev\" \"pnpm --filter ./client dev\"",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "lint": "pnpm -r --if-present run lint",
+    "test": "pnpm -r --if-present run test",
+    "verify": "pnpm typecheck && pnpm lint && pnpm test",
+    "format": "pnpm -r --if-present run format",
+    "format:check": "pnpm -r --if-present run format:check"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
