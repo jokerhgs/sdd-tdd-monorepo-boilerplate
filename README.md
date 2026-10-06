@@ -16,7 +16,13 @@ client/                    # Frontend (own AGENTS.md once cloned)
 
 ## Using this template
 
-1. Clone this repo, then clone your chosen stacks into `client/` and `server/` (and any other workspace folders you add to `pnpm-workspace.yaml`).
+```bash
+git clone --depth 1 --single-branch --branch main <root-url> my-project
+git clone --depth 1 --single-branch --branch main <frontend-url> my-project/client
+git clone --depth 1 --single-branch --branch main <backend-url> my-project/server
+```
+
+1. Clone this repo, then clone your chosen stacks into `client/` and `server/` (and any other workspace folders you add to `pnpm-workspace.yaml`). Remove each nested `.git` directory afterwards so everything commits to one repo.
 2. Each cloned package MUST expose these scripts (they can be no-ops if not applicable):
    `dev`, `typecheck`, `lint`, `test`, `format`, `format:check`.
 3. Root scripts only delegate — root owns no ESLint/Prettier/TS config so clones stay flexible.
